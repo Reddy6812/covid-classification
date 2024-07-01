@@ -6,5 +6,11 @@ T2(okay but needs to get optimized): an image segmentation network to segment th
 Encoder: ResNet50 extracts rich features from images.
 Decoder: Custom U-Net decoder upsamples features to original resolution.
 Skip Connections: Preserve spatial information, improving segmentation accuracy.
+**Binary Cross-Entropy (BCE):**
+Measures the difference between the predicted probabilities and the true binary labels.
+Penalizes predictions that are far from the actual labels. Ensures that the model outputs probabilities close to the true labels.
+**Dice Loss:**
+Measures the overlap between the predicted segmentation and the ground truth segmentation.
+Directly maximizes the intersection over the union of the predicted and true segmentations, which is useful for imbalanced classes.
 
 rough is just for testing t1 and t2
